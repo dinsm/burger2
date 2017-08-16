@@ -1,8 +1,8 @@
 body{
     text-align: center;
-    background: url("https://images5.alphacoders.com/849/thumb-1920-849377.jpg") no-repeat center center;
+    /*background: url("https://images5.alphacoders.com/849/thumb-1920-849377.jpg") no-repeat center center;*/
     background-size: cover;
-    /*background: url("https://images6.alphacoders.com/560/thumb-350-560716.jpg") no-repeat;!* c;!* center center;*!*!*/
+    background-image: url("https://images8.alphacoders.com/491/thumb-350-491680.jpg");/* no-repeat center center;*/
     /*margin-bottom: 50px;*/
     /*text-align: justify;
     text-justify: inter-word;*/
