@@ -11,16 +11,17 @@ CREATE TABLE burgers (
   date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,
   PRIMARY KEY (id)
 );
+
+
+
 -- Database Creation
-CREATE DATABASE burgers_db;
+--CREATE DATABASE burgers_db;
 
 
 -- Then run the following in your Sequelize CLI to create the migrations and seed the database
 -- Note this only works since the migrations already exist in the repo
 ---` sequelize db:migrate `
 ---` sequelize db:seed:all `
-
-
 
 --- Below are the commands used in the Sequelized CLI to create the migrations...
 --- Note that there is no need to run this if you clone down the repo, since the migrations already exist...
@@ -50,7 +51,6 @@ CREATE DATABASE burgers_db;
 
 --- 4b. Run migration to get it into MySQL database (the burger entries were added manaully)
 ---` sequelize db:migrate `
-
 
 
 
