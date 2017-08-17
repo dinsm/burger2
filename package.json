@@ -2,7 +2,7 @@
   "name": "burger2",
   "version": "1.0.0",
   "description": "/*\"production\": { \"use_env_variable\": \"JAWSDB_URL\", \"dialect\": \"mysql\" } }*/",
-  "main": "server.js",cd burger
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
