@@ -47,6 +47,8 @@
                 {{/if}}
             {{/each}}
         </div>
-
+        <form action="/{{this.burger_name}}?_method=DELETE" method="POST">
+            <button type="submit" id="killIt">Clear all the burgers</button>
+        </form>
     </div>
 </div>

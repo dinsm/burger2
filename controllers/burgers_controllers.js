@@ -17,7 +17,7 @@ sequelizeConnection.sync();
 
 // Create routes
 // ----------------------------------------------------
-router.get('/', function (req, res) {
+router.get("/", function (req, res) {
     models.burgers.findAll({})
 
         .then (function (data) {
@@ -32,10 +32,9 @@ router.get('/', function (req, res) {
 router.post("/", function (req, res) {
     var burgerName = req.body.name;
     models.burgers.create({
-            burger_name: burgerName
+            burger_name: burgerName, //burger_name: req.body.burger_name
+            devoured: false
     })
-    // models.burgers.create ({
-    //     burger_name: req.body.burger_name
         .then (res.redirect("/"));
         // .then(function(res) {
         // res.redirect("/");
@@ -52,19 +51,18 @@ router.put("/:id", function(req,res) {
         .then(res.redirect("/"));
     });
 
-// I want destroy/truncate
-// router.delete('/burgers/delete/', function (req, res) {
-//
-//     models.burgers.truncate({
-//         where:{
-//             id: req.params.id
-//         }
-//     })
-//         .then(function() {
-//             res.redirect('/burgers');
-//         });
-//
-// });
+//I want destroy/truncate
+router.delete("/:id", function (req, res) {
+ //var burger_Id = req.params.id;
+    models.burgers.truncate({
+        //db.Booking.destroy({ truncate : true, cascade: false })
+        where:{
+            id: req.params.id
+            //id: burger_Id
+            }
+    })
+        .then(res.redirect("/"));
+});
 
 // Export routes
 module.exports = router;
